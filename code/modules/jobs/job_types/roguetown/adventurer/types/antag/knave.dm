@@ -27,9 +27,7 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
@@ -52,7 +50,7 @@
 			cloak = /obj/item/clothing/cloak/raincloak/mortus //cool cloak
 			beltl = /obj/item/rogueweapon/huntingknife/idagger/steel
 			backr = /obj/item/storage/backpack/rogue/satchel
-			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/lockpickring/mundane = 1) //rogue gets lockpicks
+			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1) //rogue gets lockpicks
 			H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		if("Bow & Sword") //Poacher

@@ -3,7 +3,7 @@
 	flag = BANDIT
 	department_flag = PEASANTS
 	faction = "Station"
-	total_positions = 0 
+	total_positions = 0
 	spawn_positions = 0
 	antag_job = TRUE
 	allowed_races = RACES_ALL_KINDS
@@ -26,8 +26,6 @@
 	always_show_on_latechoices = TRUE
 	job_reopens_slots_on_death = FALSE //no endless stream of bandits, unless the migration waves deem it so
 	same_job_respawn_delay = 30 MINUTES
-
-	allow_custom_genitals = TRUE //Vrell - This prevents the job itself from culling the parts since advanced classes determine if they are allowed
 
 	cmode_music = 'sound/music/combat_bandit2.ogg'
 

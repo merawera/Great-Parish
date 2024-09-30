@@ -275,14 +275,14 @@
 #define JDO_VILLAGER 30
 #define JDO_ADVENTURER 30.1
 #define JDO_PILGRIM 30.2
-#define JDO_BANDIT 30.3
+#define JDO_BANDIT 31.3
 #define JDO_MIGRANT 32.3
 
 #define JDO_GRENZELHOFT 31
 #define JDO_DESERT_RIDER 31.1
 #define JDO_VET 31.2
-#define JDO_SELLSWORD 31.3
-#define JDO_SEELIE 31.4
+#define JDO_SELLSWORD 31.4
+#define JDO_SEELIE 31.5
 
 #define JDO_VAGRANT 33
 #define JDO_ORPHAN 34
