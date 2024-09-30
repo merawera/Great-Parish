@@ -170,7 +170,7 @@
 	throw_range = 3
 	breakouttime = 10 SECONDS
 	slipouttime = 2 MINUTES
-	cuffsound = 'sound/blank.ogg'
+	cuffsound = 'sound/foley/chain_bind.ogg'
 	possible_item_intents = list(/datum/intent/tie, /datum/intent/whips)
 	firefuel = null
 	smeltresult = /obj/item/ingot/iron

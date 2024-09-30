@@ -249,28 +249,30 @@
 		STR.max_items = 14
 		STR.not_while_equipped = TRUE
 
-/obj/item/storage/belt/rogue/pickles
-	name = "jar of pickles"
-	desc = "Briney goodness!"
-	icon = 'icons/roguetown/clothing/storage.dmi'
-	icon_state = "pickles"
-	slot_flags = null
-	w_class = WEIGHT_CLASS_NORMAL
-	max_integrity = 100
-	content_overlays = FALSE
-	heldz_items = 4
 
-/obj/item/storage/belt/rogue/pickles/ComponentInitialize()
+/obj/item/storage/backpack/rogue/satchel/surgbag
+	name = "surgery bag"
+	desc = "Contains all the phreakish devices one needs to cut a person up."
+	item_state = "doctorbag"
+	icon_state = "doctorbag"
+	attack_verb = list("beats", "bludgeons")
+
+/obj/item/storage/backpack/rogue/satchel/surgbag/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	if(STR)
-		STR.max_combined_w_class = 8
-		STR.max_w_class = WEIGHT_CLASS_SMALL
-		STR.max_items = 4
-		STR.not_while_equipped = FALSE
+		STR.max_combined_w_class = 42
+		STR.max_w_class = WEIGHT_CLASS_NORMAL
+		STR.max_items = 14
 
-/obj/item/storage/belt/rogue/pickles/PopulateContents()
-	new /obj/item/reagent_containers/food/snacks/grown/pickle(src)
-	new /obj/item/reagent_containers/food/snacks/grown/pickle(src)
-	new /obj/item/reagent_containers/food/snacks/grown/pickle(src)
-	new /obj/item/reagent_containers/food/snacks/grown/pickle(src)
+/obj/item/storage/backpack/rogue/satchel/surgbag/PopulateContents()
+	new /obj/item/needle/blessed(src)
+	new /obj/item/rogueweapon/surgery/scalpel(src)
+	new /obj/item/rogueweapon/surgery/saw(src)
+	new /obj/item/rogueweapon/surgery/hemostat(src)
+	new /obj/item/rogueweapon/surgery/hemostat(src)
+	new /obj/item/rogueweapon/surgery/retractor(src)
+	new /obj/item/rogueweapon/surgery/bonesetter(src)
+	new /obj/item/rogueweapon/surgery/cautery(src)
+	new /obj/item/natural/worms/leech/parasite(src)
+	new /obj/item/rogueweapon/surgery/hammer(src)

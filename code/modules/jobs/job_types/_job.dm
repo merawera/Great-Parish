@@ -30,6 +30,9 @@
 	//How many players have this job
 	var/current_positions = 0
 
+	//Whether this job clears a slot when you get a rename prompt.
+	var/antag_job = FALSE
+
 	//Supervisors, who this person answers to directly
 	var/supervisors = ""
 
@@ -94,6 +97,8 @@
 	var/min_pq = 0
 	var/max_pq = 0
 
+	var/announce_latejoin = TRUE //sigma told me to throw this here. For bandits not being announced when they latejoin.
+
 	var/show_in_credits = TRUE
 
 	var/give_bank_account = FALSE
@@ -140,7 +145,13 @@
 /datum/job/proc/special_job_check(mob/dead/new_player/player)
 	return TRUE
 
+/client/proc/job_greet(var/datum/job/greeting_job)
+	if(mob.job == greeting_job.title)
+		greeting_job.greet(mob)
+
 /datum/job/proc/greet(mob/player)
+	if(player?.mind?.assigned_role != title)
+		return
 	if(!job_greet_text)
 		return
 	to_chat(player, span_notice("You are the <b>[title]</b>"))
@@ -423,4 +434,5 @@
 	if(CONFIG_GET(flag/security_has_maint_access))
 		return list(ACCESS_MAINT_TUNNELS)
 	return list()
+
 

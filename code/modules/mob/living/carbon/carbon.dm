@@ -613,7 +613,7 @@
 		Immobilize(59)
 
 	if(!blood)
-		playsound(get_turf(src), pick('sound/vo/vomit.ogg','sound/vo/vomit_2.ogg'), 100, TRUE)
+		playsound(get_turf(src), 'sound/vo/vomit.ogg', 100, TRUE)
 	else
 		if(stat != DEAD)
 			playsound(src, pick('sound/vo/throat.ogg','sound/vo/throat2.ogg','sound/vo/throat3.ogg'), 100, FALSE)

@@ -6,18 +6,19 @@
 	z_list = list()
 	var/list/default_map_traits = DEFAULT_MAP_TRAITS
 
-    // Ensure the number of traits matches the number of Z-levels
-    if (default_map_traits.len != world.maxz)
-        if (default_map_traits.len > world.maxz)
-            default_map_traits.Cut(world.maxz + 1)  // Remove excess traits
-        else
-            for (var/i in (default_map_traits.len + 1) to world.maxz)
-                default_map_traits += list(list(ZTRAIT_STATION = TRUE))  // Add default traits for missing Z-levels
-
 	for (var/I in 1 to default_map_traits.len)
 		var/list/features = default_map_traits[I]
 		var/datum/space_level/S = new(I, features[DL_NAME], features[DL_TRAITS])
 		z_list += S
+
+	// Ensure the number of traits matches the number of Z-levels
+	if (default_map_traits.len != world.maxz)
+		if (default_map_traits.len > world.maxz)
+			default_map_traits.Cut(world.maxz + 1)  // Remove excess traits
+		else
+			for (var/i in (default_map_traits.len + 1) to world.maxz)
+				default_map_traits += list(list(ZTRAIT_STATION = TRUE))  // Add default traits for missing Z-levels
+
 
 /datum/controller/subsystem/mapping/proc/add_new_zlevel(name, traits = list(), z_type = /datum/space_level)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_NEW_Z, args)

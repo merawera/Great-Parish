@@ -173,3 +173,9 @@
 	name = "needle of pestra"
 	desc = span_green("This needle has been blessed by the goddess of medicine herself!")
 	infinite = TRUE
+
+/obj/item/needle/blessed
+	name = "blessed needle"
+	desc = span_green("This needle has been blessed by the goddess of medicine herself!")
+	infinite = TRUE
+

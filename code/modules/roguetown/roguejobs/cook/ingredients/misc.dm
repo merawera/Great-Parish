@@ -189,21 +189,3 @@
 	bitesize = 3
 	rotprocess = null
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3)
-
-/obj/item/reagent_containers/food/snacks/grown/cucumberjar
-	name = "jar of pickling cucumbers"
-	desc = "A jar of cucumbers that is currently pickling. Don't eat them until they're ready!"
-	bitesize = 0 
-	icon_state = "cucumberjar"
-	rotprocess = 20 MINUTES
-	become_rot_type = /obj/item/storage/belt/rogue/pickles
-
-/obj/item/reagent_containers/food/snacks/grown/pickle
-	name = "pickle"
-	desc = "It has a nice crunch to it."
-	icon = 'icons/roguetown/items/food.dmi'
-	icon_state = "pickle"
-	bitesize = 3
-	rotprocess = null
-	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
-	w_class = WEIGHT_CLASS_SMALL

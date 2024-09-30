@@ -27,7 +27,7 @@
 		/obj/item/rogueweapon/surgery/retractor = 1,
 		/obj/item/rogueweapon/surgery/bonesetter = 1,
 		/obj/item/rogueweapon/surgery/cautery = 1,
-		/obj/item/natural/worms/leech/cheele = 1,
+		/obj/item/natural/worms/leech/parasite = 1,
 		/obj/item/needle = 1,
 		/obj/item/natural/cloth = 2,
 	)

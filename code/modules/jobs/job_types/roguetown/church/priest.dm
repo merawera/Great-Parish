@@ -40,9 +40,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/priest
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
-		/obj/item/needle/pestra = 1,
-		/obj/item/natural/worms/leech/cheele = 1, //little buddy
-	)
+		/obj/item/needle/pestra = 1)
 	ADD_TRAIT(H, TRAIT_CHOSEN, TRAIT_GENERIC)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)

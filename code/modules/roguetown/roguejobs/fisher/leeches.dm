@@ -187,10 +187,10 @@
 		desc = "[desc] [jointext(descs, " ")]"
 	return TRUE
 
-/obj/item/natural/worms/leech/cheele
-	name = "cheele"
+/obj/item/natural/worms/leech/parasite
+	name = "the parasite"
 	desc = "A beautiful, blood-infusing altruistic organism made by Pestra herself."
-	icon_state = "cheele"
+	icon_state = "parasite"
 	color = null
 	consistent = TRUE
 	drainage = 0
@@ -198,14 +198,14 @@
 	blood_storage = BLOOD_VOLUME_SURVIVE
 	blood_maximum = BLOOD_VOLUME_BAD
 
-/obj/item/natural/worms/leech/cheele/attack_self(mob/user)
+/obj/item/natural/worms/leech/parasite/attack_self(mob/user)
 	. = ..()
 	giving = !giving
 	if(giving)
 		user.visible_message(span_notice("[user] squeezes [src]."),\
-							span_notice("I squeeze [src]. It will now infuse blood."))
+							span_notice("I squeeze the parasite. It will now infuse blood."))
 	else
 		user.visible_message(span_notice("[user] squeezes [src]."),\
-							span_notice("I squeeze [src]. It will now extract blood."))
+							span_notice("I squeeze the parasite. It will now extract blood."))
 
 #undef MAX_LEECH_EVILNESS
